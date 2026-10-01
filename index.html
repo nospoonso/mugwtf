@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FIX: This tag forces mobile browsers to scale the page to the device width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>MUG: What The Face?!</title>
     <meta name="author" content="NoSpoon Inc.">
     
@@ -16,34 +17,36 @@
             padding: 0;
         }
 
-        body {
+        html, body {
+            width: 100%;
+            height: 100%;
             background-color: #000000;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            overflow-x: hidden;
         }
 
-        /* Container that scales perfectly to fit screens while keeping proportions */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px;
+            overflow: hidden; /* Prevents awkward mobile bouncing/scrolling */
+        }
+
+        /* Responsive container */
         .main-container {
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             width: 100%;
-            max-width: 1000px; /* Fits desktop layouts smoothly */
-            margin: auto;
+            max-width: 600px; /* Matches normal graphic canvas width */
+            height: 100%;
         }
 
-        /* The cover image asset */
+        /* FIX: Dynamic fluid image sizing for mobile responsive scaling */
         .cover-image {
             width: 100%;
             height: auto;
-            max-height: 90vh; /* Scaled larger now that footer text is removed */
-            object-fit: contain;
+            max-height: 90vh; 
+            object-fit: contain; /* Keeps dimensions perfect without stretching */
             display: block;
         }
     </style>
@@ -51,7 +54,7 @@
 <body>
 
     <div class="main-container">
-        <!-- Renders your exact high-resolution visual layout asset centered -->
+        <!-- Renders your high-resolution Web.png responsive layout -->
         <img src="Web.png" alt="MUG: What The Face?!" class="cover-image">
     </div>
 
