@@ -2,60 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- FIX: This tag forces mobile browsers to scale the page to the device width -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>MUG | What The Face?!</title>
-    <meta name="author" content="NoSpoon Inc.">
     
-    <!-- Link to your favicon image file -->
-    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- Tab Icon (Favicon) & Mobile Icons -->
+    <link rel="icon" type="image/png" href="favicon.png?v=2">
+    <link rel="apple-touch-icon" href="favicon.png?v=2">
+
+    <!-- Mobile App Settings -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
 
     <style>
-        * {
-            box-sizing: border-box;
+        html, body {
             margin: 0;
             padding: 0;
-        }
-
-        html, body {
             width: 100%;
             height: 100%;
-            background-color: #000000;
+            background-color: #ffffff;
+            overflow: hidden;
         }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 16px;
-            overflow: hidden; /* Prevents awkward mobile bouncing/scrolling */
-        }
-
-        /* Responsive container */
-        .main-container {
+        .container {
             display: flex;
             justify-content: center;
             align-items: center;
             width: 100%;
-            max-width: 600px; /* Matches normal graphic canvas width */
             height: 100%;
         }
-
-        /* FIX: Dynamic fluid image sizing for mobile responsive scaling */
-        .cover-image {
-            width: 100%;
-            height: auto;
-            max-height: 90vh; 
-            object-fit: contain; /* Keeps dimensions perfect without stretching */
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
             display: block;
         }
     </style>
 </head>
 <body>
 
-    <div class="main-container">
-        <!-- Renders your high-resolution Web.png responsive layout -->
-        <img src="Web.png" alt="MUG: What The Face?!" class="cover-image">
+    <div class="container">
+        <!-- Main Landing Photo -->
+        <img src="Web.png" alt="MUG Landing Page">
     </div>
 
 </body>
