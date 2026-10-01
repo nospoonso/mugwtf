@@ -2,12 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MUG: What The Face?!</title>
     <meta name="author" content="NoSpoon Inc.">
     
-    <!-- Link to your favicon image file -->
+    <!-- Standard Desktop Browser Tab Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- 📱 MOBILE ADD-TO-HOME-SCREEN FIX CODES -->
+    <!-- Tells Apple Safari iOS to use your asset file for the application tile -->
+    <link rel="apple-touch-icon" href="favicon.png">
+    <!-- Tells Android Chrome & mobile web views to use your asset file for shortcuts -->
+    <link rel="icon" sizes="192x192" href="favicon.png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
 
     <style>
         * {
@@ -23,36 +31,22 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden; /* Prevent extra screen scrolling */
         }
 
         .wrapper {
             width: 100%;
-            height: 100%;
+            max-width: 1920px;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 12px; /* Slight screen clearance padding */
         }
 
         .cover-image {
-            display: block;
             width: 100%;
             height: auto;
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain; /* Natively stretches the asset without zooming */
-        }
-
-        /* 📱 Clean Mobile Override Rules */
-        @media (max-width: 768px) {
-            .wrapper {
-                padding: 8px;
-            }
-            .cover-image {
-                width: 100vw;
-                height: auto;
-            }
+            max-height: 100vh;
+            object-fit: contain;
+            display: block;
         }
     </style>
 </head>
