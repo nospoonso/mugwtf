@@ -25,7 +25,7 @@ h1{font-size:clamp(48px,8vw,88px);margin:0 0 14px}
 .toc b{font-size:12px;letter-spacing:2px;color:var(--mute);margin-bottom:8px}
 .toc a{color:var(--soft);text-decoration:none;font-size:14px;font-weight:700;padding:7px 10px;border-radius:10px}
 .toc a:hover{background:#17171A;color:var(--off)}
-.doc{max-width:720px}
+.doc{max-width:720px;min-width:0}
 .doc h2{font-family:'Gen JP Display','Gen JP',sans-serif;font-weight:800;letter-spacing:-.02em;font-size:28px;margin:44px 0 12px;scroll-margin-top:90px}
 .doc h2:first-child{margin-top:0}
 .doc h3{font-size:17px;margin:24px 0 8px}
@@ -68,5 +68,5 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--mute);font-si
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 footer a{color:var(--mute);text-decoration:none;margin-left:16px}
 footer a:hover{color:var(--off)}
-@media (max-width:900px){.layout{grid-template-columns:1fr;gap:20px}.toc{position:static;flex-direction:row;flex-wrap:wrap}.toc b{width:100%}}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr);gap:20px}.toc{position:static;flex-direction:row;flex-wrap:wrap}.toc b{width:100%}}
 @media (max-width:640px){.nav nav a{padding:7px 9px;font-size:13px}.nav nav a.hide{display:none}.cards{grid-template-columns:1fr}footer a{margin:0 16px 0 0}}
