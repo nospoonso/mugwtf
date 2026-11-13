@@ -49,6 +49,15 @@ td:first-child{color:var(--off);font-weight:700}
 .card b{font-family:'Gen JP Display','Gen JP',sans-serif;font-weight:800;font-size:22px;letter-spacing:-.02em}
 .card span{font-weight:700;font-size:15px;line-height:1.45}
 .card a{color:var(--ink);font-weight:800}
+.sc{display:flex;flex-wrap:wrap;gap:4px 18px;margin-top:22px;font-size:14px;font-weight:700}
+.sc b{color:var(--mute);font-size:12px;letter-spacing:2px;width:100%;margin-bottom:2px}
+.sc a{color:var(--soft);text-decoration:none;border-bottom:2px solid transparent;padding:4px 0}
+.sc a:hover{color:var(--off)}
+.sc a.on{color:var(--grn);border-bottom-color:var(--grn)}
+a.card{text-decoration:none;transition:transform .15s}
+a.card:hover{transform:translateY(-2px) rotate(-.4deg)}
+a.card em{font-style:normal;font-weight:800;font-size:14px;margin-top:4px}
+.res h3{font-family:'Gen JP Display','Gen JP',sans-serif;font-weight:800;font-size:20px;letter-spacing:-.01em;margin:28px 0 6px;color:var(--off)}
 .help{border-radius:24px;padding:24px 26px;background:var(--pnk);color:var(--ink)}
 .help h2{color:var(--ink);margin:0 0 8px!important}
 
